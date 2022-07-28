@@ -13,9 +13,13 @@ namespace PesquisaSorveteria
             if (string.IsNullOrEmpty(console))
                 return;
 
-            var itens = new int[5];
             var array = console.Split(',');
-
+            Pesquisa(array);
+            Console.ReadLine();
+        }
+        static void Pesquisa(string[] array)
+        {
+            var itens = new int[5];
             for (int item = 0; item < itens.Length; item++)
             {
                 if (array.Contains(item.ToString()))
@@ -52,8 +56,6 @@ namespace PesquisaSorveteria
                         break;
                 }
             }
-            
-            Console.ReadLine();
         }
     }
 }
